@@ -1,0 +1,68 @@
+/* Reset básico */
+body, h1, h2, h5, p { margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #081c24;
+    color: #ffffff;
+}
+
+.tmdb-nav {
+    background-color: #032541;
+}
+
+.tmdb-search {
+    background-color: #e6e6e6;
+    border: none;
+    padding: 5px 10px;
+}
+
+.tmdb-search-btn {
+    background-color: #01b4e4;
+    border: none;
+    color: #000;
+    padding: 6px 12px;
+}
+
+.hero-section {
+    //background: url('/images/hero-bg.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    border-left: 4px solid #01b4e4;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.tmdb-card {
+    background-color: #152f3a;
+    border: none;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.tmdb-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
