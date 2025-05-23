@@ -7,6 +7,7 @@ import lombok.Setter;
 @Entity
 public class MovieList {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false)
     private Integer id;
 

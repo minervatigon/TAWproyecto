@@ -78,6 +78,7 @@ public class Movie {
     @OneToMany(mappedBy = "idMovie", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cast> castList;
 
+
     public Integer getId() {
         return id;
     }
