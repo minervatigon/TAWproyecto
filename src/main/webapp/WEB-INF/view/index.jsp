@@ -10,29 +10,30 @@
     <title>TAW Movies</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 </head>
 <body>
+
+
 <div class="container my-3">
+
     <%
         UserType loggedInUser = (UserType) session.getAttribute("user");
 
         if (loggedInUser != null) {
     %>
         <a href="/salir" class="btn btn-outline-secondary btn-sm">Logout</a>
-    <%
-    } else {
 
-        String errorMessage = (String) request.getAttribute("error");
-        // Si hay un mensaje de error, lo mostramos
-        if (errorMessage != null && !errorMessage.isEmpty()) {
-    %>
-    <div class="alert alert-danger alert-dismissible fade show p-2" role="alert">
-        <%= errorMessage %> <%-- Mostramos el error con una expresión JSP --%>
-        <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+    <table>
+        <tr>
+            <th>Películas</th>
+            <th><a href="#">Actores</a></th>
+            <th><a href="#">Plantilla</a></th>
+            <th><a href="/pagLista?act=<%=loggedInUser.getId()%>">Listas</a></th>
+        </tr>
+    </table>
     <%
-        }
+    }else{
     %>
     <%--@elvariable id="usuario" type="es.uma.taw.tawmovies.ui.Usuario"--%>
     <form:form method="post" modelAttribute="usuario" action="/autentica">
