@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class Controlador {
+public class ControladorPelícula {
 
     @Autowired private MovieRepository movieRepository;
 
