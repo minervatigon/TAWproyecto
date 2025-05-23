@@ -22,7 +22,7 @@
  <div  class="container mt-4">
      <h1>Añadir película</h1>
      <h3>Rellena los siguientes campos: </h3>
-    <form method="post" action="/crear">
+    <form method="post" action="/crearMovie">
         <label>Presupuesto: </label>
         <input name="budget" type="number" size="5"><br/>
         <label>Enlace: </label>

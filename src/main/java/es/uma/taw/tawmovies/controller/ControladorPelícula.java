@@ -103,7 +103,7 @@ public class ControladorPelícula {
         return "resultadoBusqueda";  // tu JSP: /WEB-INF/views/filtros.jsp
     }
 
-    @PostMapping("/editar")
+    @PostMapping("/editarMovie")
     public String editarPelicula(HttpSession session,
                                  @RequestParam("id")Integer id,
                                  @RequestParam("titulo")String tit,
@@ -156,7 +156,7 @@ public class ControladorPelícula {
 
         return "redirect:/movie/{id}";
     }
-    @PostMapping("/añadir")
+    @PostMapping("/añadirMovie")
     public String anyadirMovie(Model model, HttpSession session){
         List<Gender> genders = this.genderRepository.findAll();
         List<SpokenLanguage> languages = this.spokenLanguageRepository.findAll();
@@ -166,7 +166,7 @@ public class ControladorPelícula {
 
         return"crearMovie";
     }
-    @PostMapping("/crear")
+    @PostMapping("/crearMovie")
     public String crearPelicula(HttpSession session,
                                 @RequestParam("budget")Integer budget,
                                 @RequestParam("homepage")String homepage,
@@ -235,7 +235,7 @@ public class ControladorPelícula {
 
         return "redirect:/";
     }
-    @GetMapping("/eliminar")
+    @GetMapping("/eliminarMovie")
     public String eliminarPelicula(HttpSession session,@RequestParam("act") Integer movieId){
         this.movieRepository.deleteById(movieId);
         return "redirect:/";

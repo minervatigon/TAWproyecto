@@ -78,7 +78,7 @@
     <%
         if(loggedInUser!=null && (loggedInUser.getIdRole()==1 || loggedInUser.getIdRole()==3)){
     %>
-    <form method="post" action="/añadir">
+    <form method="post" action="/añadirMovie">
         <button type="submit">Añadir película</button>
     </form>
     <%
@@ -101,7 +101,7 @@
                                 <%
                                     if(loggedInUser!=null && loggedInUser.getIdRole()==1){
                                 %>
-                                <a href="/eliminar?act=<%=movie.getId()%>">Eliminar película</a>
+                                <a href="/eliminarMovie?act=<%=movie.getId()%>">Eliminar película</a>
                                 <%
                                     }
                                 %>
@@ -133,7 +133,7 @@
                             <%
                                 if(loggedInUser!=null && loggedInUser.getIdRole()==1){
                             %>
-                            <a href="/eliminar?act=<%=movie.getId()%>">Eliminar película</a>
+                            <a href="/eliminarMovie?act=<%=movie.getId()%>">Eliminar película</a>
                             <%
                                 }
                             %>
@@ -165,7 +165,7 @@
                             <%
                                 if(loggedInUser!=null && loggedInUser.getIdRole()==1){
                             %>
-                            <a href="/eliminar?act=<%=movie.getId()%>">Eliminar película</a>
+                            <a href="/eliminarMovie?act=<%=movie.getId()%>">Eliminar película</a>
                             <%
                                 }
                             %>

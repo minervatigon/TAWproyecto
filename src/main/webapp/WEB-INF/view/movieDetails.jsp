@@ -27,7 +27,7 @@
 
         %>
         <div class="col-md-8">
-            <form method="post" action="/editar">
+            <form method="post" action="/editarMovie">
                 <input name="id" type="hidden" value="<%=movie.getId()%>">
                 <h1><input name="titulo" type="text" size="50" value="<%=movie.getTitle()%>"/></h1><br/>
                 <label><strong>Fecha de estreno:</strong></label>

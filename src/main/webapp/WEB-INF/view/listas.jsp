@@ -1,4 +1,3 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="es.uma.taw.tawmovies.movies.Movie" %>
 <%@ page import="java.util.List" %>
@@ -25,6 +24,8 @@
             <th>Nombre</th>
             <th>Películas</th>
             <th>Duración maratón</th>
+            <th> </th>
+            <th></th>
         </tr>
         <%
             for(Lista l:listas){
@@ -43,13 +44,16 @@
                     }
                 %>
             </td>
-            <td>
-                <%=totalTime%>
-            </td>
+            <td><%=totalTime%></td>
+            <td><a href="/editarLista?act=<%=l.getId()%>">Editar</a> </td>
+            <td><a href="/eliminarLista?act=<%=l.getId()%>">Eliminar</a></td>
         </tr>
         <%
             }
         %>
-
     </table>
+    <form method="post" action="/añadirLista">
+        <input type="hidden" name="userId" value="<%=user.getId()%>">
+        <button type="submit">Añadir película</button>
+    </form>
 </body>

@@ -84,6 +84,5 @@ public class UserType {
 
     public void removeLista(Lista lista) {
         this.listas.remove(lista);
-        lista.setUsuario(null);
     }
 }
